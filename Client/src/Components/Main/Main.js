@@ -1,7 +1,7 @@
-import "./searchElement.scss"
+import "./main.scss"
 import React from 'react'
 
-function SearchElement() {
+function Main() {
     return (
         <section>
             <img className="logo" src="/Images/CatwikiLogo.svg" />
@@ -21,11 +21,25 @@ function SearchElement() {
                     <p>Most searched breeds</p>
                     <div className="headerContainer">
                         <h1>66+ Breeds For you <br/> to discover</h1>
-                        <button>See more <img src="/Images/arrow.svg" /></button>
+                        <button className="btn">See more <img src="/Images/arrow.svg" /></button>
                     </div>
+                </div>
+            </div>
+            <div className="whyCatContainer">
+                <div className="subContainer">
+                    <h1>Why should you <br /> have a cat?</h1>
+                    <p>Having a cat around can actually trigger the release of calming chemicals in your body which lower your stress and anxiety levels.</p>
+                    <button className="btn">Read more <img src="/Images/arrow.svg"/></button>
+                </div>
+                <div className="picturesContainer">
+                    <div>
+                        <img className="imgOne" src="/Images/image 2.png"/>
+                        <img className="imgTwo" src="/Images/image 1.png"/>
+                    </div>
+                    <img className="imgThree" src="/Images/image 3.png"/>
                 </div>
             </div>
         </section>
     )
 }
-export default SearchElement
+export default Main

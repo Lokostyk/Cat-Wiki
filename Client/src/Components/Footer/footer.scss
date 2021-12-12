@@ -1,0 +1,17 @@
+.footerContainer {
+  padding: 1.2rem 1rem 1rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  background-color: black;
+  border-radius: 3rem 3rem 0 0;
+  img {
+    margin-left: 4rem;
+  }
+  p {
+    margin: auto 1rem;
+    font-size: 1.1rem;
+    color: white;
+  }
+}

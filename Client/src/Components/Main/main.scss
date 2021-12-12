@@ -2,8 +2,22 @@
 .logo {
   margin: 1rem 0 1rem 10vw;
 }
+.btn {
+  display: flex;
+  align-items: center;
+  color: $main;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: unset;
+  background-color: unset;
+  opacity: 0.6;
+  img {
+    margin: 0 0 -1px 6px;
+  }
+}
 .mainContainer {
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -77,24 +91,74 @@
       margin: 2rem 0;
       display: flex;
       justify-content: space-between;
-      button {
-        margin-top: auto;
-        color: $main;
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border: unset;
-        background-color: unset;
-        opacity: 0.6;
-        img {
-          margin: 0 0 -1.8px 5px;
-        }
-      }
     }
     h1 {
       font-size: 3rem;
       font-weight: bold;
       color: $main;
     }
+    button {
+      margin-top: auto;
+    }
+  }
+}
+.whyCatContainer {
+  display: flex;
+  justify-content: center;
+  .subContainer {
+    margin: 0 1rem 0 8rem;
+    width: 26rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $main;
+    position: relative;
+    &::before {
+      margin-bottom: 0.5rem;
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background-color: $main;
+    }
+  }
+  p {
+    font-weight: 500;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+  }
+  button {
+    margin-top: 1rem;
+    float: left;
+  }
+  .picturesContainer {
+    padding-top: 2rem;
+    display: flex;
+    img {
+      object-fit: contain;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  .imgOne {
+    margin: 0 1.5rem 0 0;
+    width: 75%;
+  }
+  .imgTwo {
+    margin: 1.5rem 1.5rem 0 0;
+    height: 50%;
+  }
+  .imgThree {
+    margin-bottom: auto;
+    height: 70%;
   }
 }
