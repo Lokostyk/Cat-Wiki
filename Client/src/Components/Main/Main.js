@@ -1,7 +1,13 @@
 import "./main.scss"
-import React from 'react'
+import React,{useContext, useEffect} from 'react'
+import {CatsContext} from "../../App"
 
 function Main() {
+    const cats = useContext(CatsContext)
+
+    useEffect(()=>{
+
+    },[])
     return (
         <section>
             <img className="logo" src="/Images/CatwikiLogo.svg" />
