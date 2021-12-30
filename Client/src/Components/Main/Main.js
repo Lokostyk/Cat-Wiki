@@ -1,12 +1,16 @@
 import "./main.scss"
 import React,{useContext, useEffect} from 'react'
 import {CatsContext} from "../../App"
+import axios from "axios"
 
 function Main() {
     const cats = useContext(CatsContext)
 
     useEffect(()=>{
-
+        axios.get("/")
+        .then(res=>{
+            console.log(res)
+        })
     },[])
     return (
         <section>
