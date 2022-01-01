@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const catSchema = new mongoose.Schema({
     breed: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {

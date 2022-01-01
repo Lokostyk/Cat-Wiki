@@ -4,7 +4,6 @@ const catModel = require("../models/Cats")
 
 router.get("/",async (req,res)=>{
     const cats = await catModel.find({})
-    console.log(cats)
     try{
         res.send(cats)
     }catch (err){

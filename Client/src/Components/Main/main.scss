@@ -8,6 +8,7 @@
   color: $main;
   font-size: 1.1rem;
   font-weight: bold;
+  text-decoration: none;
   text-transform: uppercase;
   border: unset;
   background-color: unset;
@@ -99,6 +100,23 @@
     }
     button {
       margin-top: auto;
+    }
+  }
+  .mainCats {
+    display: flex;
+    justify-content: space-between;
+    .catContainer {
+      width: 24%;
+      img {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 1.5rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
     }
   }
 }

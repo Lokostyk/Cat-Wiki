@@ -1,20 +1,14 @@
 import "./main.scss"
-import React,{useContext, useEffect} from 'react'
+import React,{useContext} from 'react'
+import { Link } from "react-router-dom"
 import {CatsContext} from "../../App"
-import axios from "axios"
+import MainCats from "./subcomponents/MainCats"
 
 function Main() {
     const cats = useContext(CatsContext)
-
-    useEffect(()=>{
-        axios.get("/")
-        .then(res=>{
-            console.log(res)
-        })
-    },[])
     return (
         <section>
-            <img className="logo" src="/Images/CatwikiLogo.svg" />
+            <Link to="/"><img className="logo" src="/Images/CatwikiLogo.svg" /></Link>
             <div className="mainContainer">
                 <div className="subContainer">
                     <div className="searchBreed">
@@ -31,7 +25,13 @@ function Main() {
                     <p>Most searched breeds</p>
                     <div className="headerContainer">
                         <h1>66+ Breeds For you <br/> to discover</h1>
-                        <button className="btn">See more <img src="/Images/arrow.svg" /></button>
+                        <Link to="/top10cats" className="btn">See more <img src="/Images/arrow.svg" /></Link>
+                    </div>
+                    <div className="mainCats">
+                        {cats.map((item,index)=>{
+                            if(index > 3) return
+                            return <MainCats key={item._id} data={item}/>
+                        })}
                     </div>
                 </div>
             </div>
