@@ -2,7 +2,6 @@ import React from 'react'
 
 function mainCats(props) {
     const data = props.data
-    console.log(data)
     return (
         <div className='catContainer'>
             <img src={data.imgs[0]} />            
