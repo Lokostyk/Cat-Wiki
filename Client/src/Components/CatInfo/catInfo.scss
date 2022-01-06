@@ -1,15 +1,30 @@
 .catInfoContainer {
   margin: 0 auto;
+  padding-top: 2rem;
   width: 80vw;
   display: flex;
+  align-items: flex-start;
   img {
-    margin: 4rem;
+    margin: 0 4rem;
     width: 25vw;
     object-fit: cover;
     border-radius: 4rem;
   }
+  .tile {
+    margin: 0 0.5rem;
+    display: flex;
+    width: 60px;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    &:first-of-type {
+      margin-left: auto;
+    }
+  }
+  .active {
+    background: #544439;
+  }
   .details {
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     h1 {
@@ -18,9 +33,10 @@
     }
     h2 {
       margin: 1rem 0;
+      margin-right: 0.5rem;
       font-size: 1.1rem;
     }
-    p {
+    .description {
       margin: 2rem 2rem 1rem 0;
       font-size: 1.1rem;
       font-weight: 500;
@@ -28,9 +44,14 @@
     }
     ul {
       list-style-type: none;
+      align-self: flex-start;
       li {
         display: flex;
         align-items: center;
+        p {
+          margin-top: 0.15rem;
+          font-weight: 500;
+        }
       }
     }
   }
